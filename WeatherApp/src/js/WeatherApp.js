@@ -95,7 +95,6 @@ var GradeTemp = React.createClass({
 
   render: function() {
         var isFarh = this.state.isFarh;
-        console.log(this.state.isFarh)
         var NewTemp = Math.round( (this.props.temp * 9)/5 + 32 );
         var sign = <span>&#8457;</span>
         if (!isFarh) {
@@ -114,7 +113,6 @@ var GradeTemp = React.createClass({
 var WeatherApp = React.createClass({
   getInitialState: function () {
     this.geolocationSearch
-    console.log(this.geolocationSearch())
     return {
       lat: this.props.initialLat,
       lon: this.props.initialLon,
@@ -178,7 +176,6 @@ var WeatherApp = React.createClass({
           var numImg = data.data.weather[0].icon.substring(0,data.data.weather[0].icon.length -1);
           var bgContainer = document.body
           numImg = '50'
-          console.log(numImg)
          if(data.data.weather[0].icon.substring(2,data.data.weather[0].icon.length) == 'd'){
               document.getElementById('container').style.backgroundColor = 'rgba(255,255,0,0.3)';
               document.getElementById('container').style.color = '#000000';
